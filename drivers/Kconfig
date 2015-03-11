@@ -186,4 +186,6 @@ source "drivers/thunderbolt/Kconfig"
 
 source "drivers/gator/Kconfig"
 
+source "drivers/tee/Kconfig"
+
 endmenu

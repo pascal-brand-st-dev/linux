@@ -164,3 +164,4 @@ obj-$(CONFIG_RAS)		+= ras/
 obj-$(CONFIG_THUNDERBOLT)	+= thunderbolt/
 
 obj-$(CONFIG_GATOR)		+= gator/
+obj-$(CONFIG_TEE)		+= tee/
