@@ -6,6 +6,7 @@
  */
 
 /dts-v1/;
+/memreserve/ 0x3ef00000 0x00100000; /* OP-TEE SHM */
 
 #include "hikey-pinctrl.dtsi"
 #include "hikey-gpio.dtsi"
@@ -35,7 +36,7 @@
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x0 0x0 0x38c00000>;
+		reg = <0x0 0x0 0x0 0x3f000000>;
 	};
 
 	smb {
