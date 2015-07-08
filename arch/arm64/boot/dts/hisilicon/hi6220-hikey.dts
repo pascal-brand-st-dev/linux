@@ -9,6 +9,8 @@
 
 /*Reserved 1MB memory for MCU*/
 /memreserve/ 0x05e00000 0x00100000;
+/* OP-TEE: 1MB shared memory + 16MB secure kernel/user memory */
+/memreserve/ 0x3ef00000 0x01100000;
 
 #include "hi6220.dtsi"
 
