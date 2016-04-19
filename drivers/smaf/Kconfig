@@ -10,6 +10,12 @@ config SMAF_CMA
 	help
 	  Choose this option to enable CMA allocation within SMAF
 
+config SMAF_OPTEE_ALLOCATOR
+	tristate "SMAF OPTEE Allocator"
+	depends on SMAF && TEE && OPTEE
+	help
+	  Choose this option to enable Secure allocation from OP-TEE within SMAF
+
 config SMAF_FAKE_SECURE
 	tristate "SMAF fake secure module"
 	depends on SMAF
