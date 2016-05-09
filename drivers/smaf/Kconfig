@@ -21,3 +21,10 @@ config SMAF_FAKE_SECURE
 	depends on SMAF
 	help
 	  Choose this option to enable fake secure module for test purpose
+
+config SMAF_OPTEE_SECURE
+	tristate "SMAF OPTEE Allocator"
+	depends on SMAF && TEE && OPTEE
+	help
+	  Choose this option to enable secure module from OP-TEE within SMAF
+
