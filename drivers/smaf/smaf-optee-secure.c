@@ -63,22 +63,11 @@ static void smaf_fakesecure_revoke_access(void *ctx,
 	WARN_ON(!priv || (priv->magic != MAGIC));
 }
 
-static bool smaf_fakesecure_allow_cpu_access(void *ctx,
-					     enum dma_data_direction direction)
-{
-	struct fake_private *priv = (struct fake_private *)ctx;
-
-	WARN_ON(!priv || (priv->magic != MAGIC));
-
-	return priv->magic == MAGIC;
-}
-
 static struct smaf_secure fake = {
 	.create_ctx = smaf_fakesecure_create,
 	.destroy_ctx = smaf_fakesecure_destroy,
 	.grant_access = smaf_fakesecure_grant_access,
 	.revoke_access = smaf_fakesecure_revoke_access,
-	.allow_cpu_access = smaf_fakesecure_allow_cpu_access,
 };
 
 static int __init smaf_fakesecure_init(void)
